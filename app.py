@@ -726,10 +726,9 @@ def build_app() -> gr.Blocks:
 # Punto de entrada para ejecución directa
 if __name__ == "__main__":
     app = build_app()
-    # Lanzamiento local aplicando el tema y estilos en launch() conforme a Gradio 6
+    # Lanzamiento local dinámico en el primer puerto libre (7860, 7861, etc.)
     app.launch(
         server_name="127.0.0.1",
-        server_port=7860,
         theme=get_theme(),
         css=CUSTOM_CSS,
         show_error=True
